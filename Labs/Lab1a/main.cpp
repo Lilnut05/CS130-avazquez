@@ -21,10 +21,14 @@ using namespace std; //resolve cout, cin, and endl names
 int main()
 {
     //FIXME3: declare a variable to store name
+    std::string name;
     //FIXME4: prompt user to enter their name and store the value into name variable using getline function
-    
+    cout <<"Please enter your name:";
+    cin >> name;
     //FIXME5: greet the name using the variable as the following output
     //must output: Nice meeting you, <name>!
+    cout<< "Nice meeting you, " << name << "!";
+    cout << "\n";
 
     cout << "Hope you like my Tom & Jerry ASCII art...\n\n";
 
@@ -50,6 +54,6 @@ int main()
 
     cout << "\nGood bye... hit enter to exit the program: " << '\n';
     //FIXME10: make the console wait for user input
-
+    cin >> 
     return 0; //exit program by returning 0 status to the system
 }
