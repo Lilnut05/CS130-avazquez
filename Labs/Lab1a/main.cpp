@@ -2,8 +2,8 @@
     StdIO Lab
     ASCII Art - using literals and variables
     
-    Updated By: <Your name> #FIXME1
-    Date: ... #FIXME2
+    Updated By: <Adriel Vazquez> #FIXED
+    Date: 9/6/24
     
     This program produces an ASCII art on the console.
 
@@ -14,18 +14,17 @@
 
 #include <iostream> //library for input and output
 #include <string> //library for string data
- 
 using namespace std; //resolve cout, cin, and endl names
  
 //main entry point of the program
 int main()
 {
-    //FIXME3: declare a variable to store name
+    //FIXED: declare a variable to store name
     std::string name;
-    //FIXME4: prompt user to enter their name and store the value into name variable using getline function
+    //FIXED: prompt user to enter their name and store the value into name variable using getline function
     cout <<"Please enter your name:";
     cin >> name;
-    //FIXME5: greet the name using the variable as the following output
+    //FIXED: greet the name using the variable as the following output
     //must output: Nice meeting you, <name>!
     cout<< "Nice meeting you, " << name << "!";
     cout << "\n";
@@ -52,8 +51,10 @@ int main()
     //FIXED: use variable to print the fifth line
     //Note: You can add more lines or print more ASCII arts of your choice if you'd like...
 
-    cout << "\nGood bye... hit enter to exit the program: " << '\n';
-    //FIXME10: make the console wait for user input
-    cin >> 
+    cout << "\nGood bye... hit enter to exit the program: " << endl;
+    //FIXED: make the console wait for user input
+    cin.ignore(1,'\n');
+    cin.get();
+    
     return 0; //exit program by returning 0 status to the system
 }
