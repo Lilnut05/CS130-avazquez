@@ -19,12 +19,12 @@
 | Name | Value |
 | :--- | :--- |
 | Name | Hangman |
-| Description | Code a short hangman code to show how it would be laid out, and do kattis [echo problem on Kattis](https://open.kattis.com/problems/egypt) |
+| Description | Code a short hangman code to show how it would be laid out, and do kattis [echo problem on Kattis](https://open.kattis.com/problems/echoechoecho) |
 | Due Date | 9/9/24 |
-| Status | WIP |
-| Location | https://github.com/rambasnet/csci000-astudent/tree/master/assignments/cpp/egypt |
+| Status | Complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/stdio/hangman and https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/stdio/echoechoecho |
 | Self Grade | 85/100 |
-| Notes | completed the hangman code, working on Kattis |
+| Notes | completed the hangman code and kattis echo echo echo |
 
 ### Assignment #1
 
@@ -32,11 +32,11 @@
 | :--- | :--- |
 | Name | Hello World |
 | Description | A basic hello world program |
-| Due Date | 1-Jan-20 |
+| Due Date |  |
 | Status | Done |
-| Location | https://github.com/rambasnet/csci000-astudent/tree/master/python/hello |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/Hello |
 | Self Grade | 100/100 |
-| Notes | completed all the requirements and tested program many times; solution accepted by kattis; screenshot found in the same location |
+| Notes | completed all hello world, and also submitted on kattis |
 
 
 
@@ -63,7 +63,7 @@
 | Description | Lab covering standard input and output to make ASCII art |
 | Due Date | 9/6/24 |
 | Status | complete |
-| Location | https://github.com/rambasnet/csci000-astudent/tree/master/labs/cpp/stdio |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Labs/Lab1a |
 | Self Grade | 90/100 |
 | Notes | fixed all the fixmes |
 
