@@ -14,6 +14,19 @@
 
 ## Assignments
 
+### Assignment #3
+
+| Name | Value |
+| :--- | :--- |
+| Name | Hangman |
+| Description | Code a program to determine the Area and Perimeter of a triangle. |
+| Due Date | 9/16/24 |
+| Status | Complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/math/triangle |
+| Self Grade | 90/100 |
+| Notes | Completed HW 3 |
+
+
 ### Assignment #2
 
 | Name | Value |
