@@ -18,13 +18,13 @@
 
 | Name | Value |
 | :--- | :--- |
-| Name | Hangman |
-| Description | Code a program to determine the Area and Perimeter of a triangle. |
+| Name | Math |
+| Description | Code a program to determine the Area and Perimeter of a triangle. Kattis R2|
 | Due Date | 9/16/24 |
 | Status | Complete |
-| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/math/triangle |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/math/triangle and https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/math/r2|
 | Self Grade | 90/100 |
-| Notes | Completed HW 3 |
+| Notes | Completed HW 3 and Kattis r2 |
 
 
 ### Assignment #2
