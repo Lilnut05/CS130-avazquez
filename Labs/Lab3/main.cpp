@@ -1,6 +1,6 @@
 /*
 Functions Lab
-Updated By: FIXME1
+Updated By: Adriel Vazquez
 CSCI 111
 Date: FIXME2
 
@@ -55,15 +55,19 @@ int main()
     {
         clearScreen();
         cout << "Program calculates distance between 2 points on a 2D coordinate." << endl;
-        cout << "Enter a point in the form (x, y): ";
+        cout << "Enter a point in the form (x, y): "; 
         // parse the input stream
         cin >> ch >> x1 >> ch >> y1 >> ch; // value stored in ch is ignored
         printf("(x1, y1) = (%d, %d)\n", x1, y1);
 
         cout << "Enter a second point in the form (x, y): ";
         //FIXME3 - Read/parse the second point and store data into variables x2 and y2
+        cin >> ch >> x2 >> ch >> y2 >> ch;
         //FIXME4 - Call unitTest function
-
+        unitTest()
+        {
+            findDistance
+        }
         //FIXME5 - call findDistance function passing proper arguments
         //FIXME6 – Using printf function display the returned distance with proper description
     }
