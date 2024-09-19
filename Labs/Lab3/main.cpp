@@ -67,9 +67,10 @@ int main()
         //FIXME4 - Call unitTest function
         unitTest();
         {
-        
+
         }
         //FIXME5 - call findDistance function passing proper arguments
+        findDistance = sqrt(((x2-x1)^2+(y2-y1)^2));
         //FIXME6 – Using printf function display the returned distance with proper description
     }
 
