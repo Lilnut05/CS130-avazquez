@@ -59,6 +59,18 @@
 
 | Name | Value |
 | :--- | :--- |
+| Name | 3 - Functions Lab |
+| Description | Lab to determine the distance between two points |
+| Due Date | 9/20/24 |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Labs/Lab2 |
+| Self Grade | 90/100 |
+| Notes | fixed all the fixmes |
+
+### Lab #2
+
+| Name | Value |
+| :--- | :--- |
 | Name | 2 - Functions and Unittest Lab |
 | Description | Lab covering standard input and output |
 | Due Date | 9/12/24 |
