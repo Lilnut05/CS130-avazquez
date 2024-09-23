@@ -1,25 +1,8 @@
-# Makefile for the calculator program
+build:
+	g++ main.cpp -o main.exe
 
-# Compiler and flags
-CXX = g++
-CXXFLAGS = -Wall -std=c++11
+run:
+	./main.exe
 
-# Target executable
-TARGET = calculator
-
-# Source files
-SRC = main.cpp
-
-# Build rule
-all: $(TARGET)
-
-$(TARGET): $(SRC)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
-
-# Run the program
-run: $(TARGET)
-	./$(TARGET)
-
-# Clean up binary files
 clean:
-	rm -f $(TARGET)
+	rm -f main.exe
