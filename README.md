@@ -14,6 +14,16 @@
 
 ## Assignments
 
+| Name | Value |
+| :--- | :--- |
+| Name | Math |
+| Description | Code a program to act as a calculator and code a program to solve kattis factor|
+| Due Date | 9/16/24 |
+| Status | Complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/HW3 |
+| Self Grade | 90/100 |
+| Notes | Completed HW 3 and Kattis Faktor|
+
 ### Assignment #3
 
 | Name | Value |
@@ -24,7 +34,7 @@
 | Status | Complete |
 | Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/math/triangle and https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/math/r2|
 | Self Grade | 90/100 |
-| Notes | Completed HW 3 and Kattis r2 |
+| Notes | Completed HW and Kattis r2 |
 
 
 ### Assignment #2
@@ -55,7 +65,7 @@
 
 ## Labs
 
-### Lab #2
+### Lab #3
 
 | Name | Value |
 | :--- | :--- |
