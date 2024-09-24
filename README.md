@@ -102,6 +102,17 @@
 | Self Grade | 90/100 |
 | Notes | fixed all the fixmes |
 
+## Projects
+
+| Name | Value |
+| :--- | :--- |
+| Name | 1 - Projectile Launch |
+| Description | Create a program to determine the velocity and distance needed to hit a target |
+| Due Date | 9/23/24 |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/projects/project1 |
+| Self Grade | 90/100 |
+| Notes | Created the program to calculate distance angle and max height of projectile |
 
 ## References
 
