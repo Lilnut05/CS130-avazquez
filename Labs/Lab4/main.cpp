@@ -117,8 +117,8 @@ double findProduct(const double &n1, const double &n2) {
 }
 
 void findAverage(const double &n1, const double &n2, double &avg) {
-    //FIXME5 - find the average of n1 and n2 and update avg
-    //FIXME6 - Must call findSum function to find the sum of n1 and n2
+    //FIXed - find the average of n1 and n2 and update avg
+    //FIXED - Must call findSum function to find the sum of n1 and n2
     avg = findSum(n1, n2) / 2;
     // Note: this void function doesn't return a value but
     // the average will be stored in avg
@@ -131,13 +131,13 @@ double findLarger(const double &n1, const double &n2) {
 }
 
 double findSmaller(const double &n1, const double &n2) {
-    //FIXME7 - find the smaller of n1 and n2 and return it
+    //FIXED - find the smaller of n1 and n2 and return it
     double smaller = (n1 <= n2) ? n1 : n2;
     return smaller;
 }
 
 double findQuotient(const double &n1, const double &n2) {
-    //FIXME8 - divide n1 by n2 and return the quotient
+    //FIXED - divide n1 by n2 and return the quotient
     return (n1 / n2);
 }
 
@@ -148,7 +148,7 @@ void test() {
     assert(answer == expected); // test case 1
     assert(findSum(-5, 10.5) == 5.5); // test case 2
 
-    // FIXME9 – Using assert function write at least 2 test cases for each of the following functions
+    // FIXed – Using assert function write at least 2 test cases for each of the following functions
     // findDifference(), findProduct(), findLarger(),
     // findSmaller(), findQuotient(), findAverage()
     printf("%s\n", "all test cases passed...");
@@ -189,15 +189,30 @@ bool program() {
         case 2:
         {
             //FIXME10: call getTwoNumbers function
+            getTwoNumbers(num1, num2);
             //FIXME11: call findDifference function and print the result
+            double difference = findDifference(num1, num2);
+            printf("%.2f - %.2f = %.2f\n", num1, num2, difference);
             break;
         }
         case 3:
         {
             //FIXME12: get two numbers and find their product using functions
+            getTwoNumbers(num1, num2);
+            double product = findProduct(num1, num2);
+            printf("%.2f * %.2f = %.2f\n", num1, num2, product);
             break;
         }
         // FIXME13: complete the rest of the cases 4, 6, and 7
+
+        case 4:
+        {
+            getTwoNumbers(num1, num2);
+            double quotient = findQuotient(num1, num2);
+            printf("%.2f / %.2f = %.2f\n", num1, num2, quotient);
+            break;
+        }
+
         case 5:
         {
             // get two numbers
@@ -206,6 +221,22 @@ bool program() {
             double max = findLarger(num1, num2);
             // print the result
             printf("larger between %.2f & %.2f is %.2f\n", num1, num2, max);
+            break;
+        }
+        case 6:
+        {
+            getTwoNumbers(num1, num2);
+            double smaller = findSmaller(num1, num2);
+            printf("smaller between %.2f & %.2f is %.2f\n", num1, num2, smaller);
+            break;
+        }
+
+        case 7:
+        {
+            getTwoNumbers(num1, num2);
+            double avg;
+            findAverage(num1, num2, avg);
+            printf("average between %.2f & %.2f is %.2f\n", num1, num2, avg);
             break;
         }
         case 8:
