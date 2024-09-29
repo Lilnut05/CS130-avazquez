@@ -188,22 +188,22 @@ bool program() {
         }
         case 2:
         {
-            //FIXME10: call getTwoNumbers function
+            //FIXED: call getTwoNumbers function
             getTwoNumbers(num1, num2);
-            //FIXME11: call findDifference function and print the result
+            //FIXED: call findDifference function and print the result
             double difference = findDifference(num1, num2);
             printf("%.2f - %.2f = %.2f\n", num1, num2, difference);
             break;
         }
         case 3:
         {
-            //FIXME12: get two numbers and find their product using functions
+            //FIXED: get two numbers and find their product using functions
             getTwoNumbers(num1, num2);
             double product = findProduct(num1, num2);
             printf("%.2f * %.2f = %.2f\n", num1, num2, product);
             break;
         }
-        // FIXME13: complete the rest of the cases 4, 6, and 7
+        // FIXed: complete the rest of the cases 4, 6, and 7
 
         case 4:
         {

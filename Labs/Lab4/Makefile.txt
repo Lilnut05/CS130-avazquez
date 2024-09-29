@@ -25,5 +25,7 @@ all:
 clean:
 	rm -f $(PROGRAM) *.o
 
-# FIXME
+# FIX
 # add a rule to run the program
+run:
+	main.exe
