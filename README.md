@@ -104,6 +104,8 @@
 
 ## Projects
 
+### Project 1
+
 | Name | Value |
 | :--- | :--- |
 | Name | 1 - Projectile Launch |

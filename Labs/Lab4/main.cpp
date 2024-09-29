@@ -1,8 +1,8 @@
 /*
 Conditional Lab
 
-FIXME1: Write programmer information
-FIXME2: Today's Date
+FIXME1: Adriel Vazquez
+FIXME2: 9/28/24
 
 Program finds statistical values of two given numbers using user-defined functions.
 
@@ -107,18 +107,19 @@ double findSum(const double &n1, const double &n2) {
 }
 
 double findDifference(const double &n1, const double &n2) {
-    //FIXME3 - subtract n2 from n1 and return the difference
-    return 0;
+    //FIXed - subtract n2 from n1 and return the difference
+    return (n1 - n2);
 }
 
 double findProduct(const double &n1, const double &n2) {
-    //FIXME4 - multiply n1 by n2 and return the product
-    return 0;
+    //FIXed - multiply n1 by n2 and return the product
+    return (n1 * n2);
 }
 
 void findAverage(const double &n1, const double &n2, double &avg) {
     //FIXME5 - find the average of n1 and n2 and update avg
     //FIXME6 - Must call findSum function to find the sum of n1 and n2
+    avg = findSum(n1, n2) / 2;
     // Note: this void function doesn't return a value but
     // the average will be stored in avg
 }   
@@ -131,12 +132,13 @@ double findLarger(const double &n1, const double &n2) {
 
 double findSmaller(const double &n1, const double &n2) {
     //FIXME7 - find the smaller of n1 and n2 and return it
-    return 0;
+    double smaller = (n1 <= n2) ? n1 : n2;
+    return smaller;
 }
 
 double findQuotient(const double &n1, const double &n2) {
     //FIXME8 - divide n1 by n2 and return the quotient
-    return 0;
+    return (n1 / n2);
 }
 
 // functions to run automated testing for various user-defined functions
