@@ -28,3 +28,6 @@ clean:
 # rule to run the program
 run:
 	./$(PROGRAM)
+	
+test: $(TARGET)
+	./$(TARGET) test
