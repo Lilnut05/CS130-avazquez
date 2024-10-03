@@ -121,51 +121,28 @@ string evenOddZero(int numbers[], int size) {
     }
 }
 
-// A simple test function to manually check if the program works correctly
 void test() {
     const int size = 5;
 
     // Test Case 1
     int nums1[size] = {1, 2, 3, 4, 5};
-    if (sum(nums1, size) != 15) {
-        cout << "Test 1 failed: Sum\n";
-    }
-    if (product(nums1, size) != 120) {
-        cout << "Test 1 failed: Product\n";
-    }
-    if (findMax(nums1, size) != 5) {
-        cout << "Test 1 failed: Max\n";
-    }
-    if (findMin(nums1, size) != 1) {
-        cout << "Test 1 failed: Min\n";
-    }
-    if (average(nums1, size) != 3.0) {
-        cout << "Test 1 failed: Average\n";
-    }
-    if (evenOddZero(nums1, size) != "Odd") {
-        cout << "Test 1 failed: EvenOddZero\n";
-    }
+    cout << "Running Test 1...\n";
+    cout << "Expected Sum: 15, Actual Sum: " << sum(nums1, size) << endl;
+    cout << "Expected Product: 120, Actual Product: " << product(nums1, size) << endl;
+    cout << "Expected Max: 5, Actual Max: " << findMax(nums1, size) << endl;
+    cout << "Expected Min: 1, Actual Min: " << findMin(nums1, size) << endl;
+    cout << "Expected Average: 3.0, Actual Average: " << average(nums1, size) << endl;
+    cout << "Expected Even/Odd: Odd, Actual: " << evenOddZero(nums1, size) << endl;
 
     // Test Case 2
     int nums2[size] = {0, 0, 0, 0, 0};
-    if (sum(nums2, size) != 0) {
-        cout << "Test 2 failed: Sum\n";
-    }
-    if (product(nums2, size) != 0) {
-        cout << "Test 2 failed: Product\n";
-    }
-    if (findMax(nums2, size) != 0) {
-        cout << "Test 2 failed: Max\n";
-    }
-    if (findMin(nums2, size) != 0) {
-        cout << "Test 2 failed: Min\n";
-    }
-    if (average(nums2, size) != 0.0) {
-        cout << "Test 2 failed: Average\n";
-    }
-    if (evenOddZero(nums2, size) != "Zero") {
-        cout << "Test 2 failed: EvenOddZero\n";
-    }
+    cout << "\nRunning Test 2...\n";
+    cout << "Expected Sum: 0, Actual Sum: " << sum(nums2, size) << endl;
+    cout << "Expected Product: 0, Actual Product: " << product(nums2, size) << endl;
+    cout << "Expected Max: 0, Actual Max: " << findMax(nums2, size) << endl;
+    cout << "Expected Min: 0, Actual Min: " << findMin(nums2, size) << endl;
+    cout << "Expected Average: 0.0, Actual Average: " << average(nums2, size) << endl;
+    cout << "Expected Even/Odd: Zero, Actual: " << evenOddZero(nums2, size) << endl;
 
-    cout << "All tests completed." << endl;
+    cout << "\nAll tests completed.\n";
 }
