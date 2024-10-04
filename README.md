@@ -65,6 +65,19 @@
 
 ## Labs
 
+### Lab #4
+
+| Name | Value |
+| :--- | :--- |
+| Name | 4 -- conditionals |
+| Description | Lab to find statistical values of two given numbers using user-defined functions |
+| Due Date | 10/3/24 |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Labs/Lab4 |
+| Self Grade | 90/100 |
+| Notes | fixed all the fixmes |
+
+
 ### Lab #3
 
 | Name | Value |
