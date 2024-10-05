@@ -14,6 +14,19 @@
 
 ## Assignments
 
+### Assignment #5
+| Name | Value |
+| :--- | :--- |
+| Name | conditionals |
+| Description | Code a program to keep numbers and output sum, average, etc.|
+| Due Date | 9/16/24 |
+| Status | Complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/HW5 |
+| Self Grade | 90/100 |
+| Notes | Completed HW 3 and Kattis Faktor|
+
+
+### Assignment #4
 | Name | Value |
 | :--- | :--- |
 | Name | Math |
