@@ -1,9 +1,9 @@
 /*
 Kattis - Dog & Gopher
 Loop Lab
-Updated By: FIXME
+Updated By: Adriel Vazquez
 CSCI 111
-Date: FIXME
+Date: 10/10/24
 
 Read and solve the Kattis problem: https://open.kattis.com/problems/doggopher 
 
@@ -47,12 +47,14 @@ int main(int argc, char* argv[]) {
     float gopher_dist, dog_dist=0;
     // read gopher's coordinates
     cin >> gopherX >> gopherY;
-    // FIXME2: read dog's coordinates
+    // FIXED: read dog's coordinates
+    cin >> dogX >> dogY;
     while (cin >> x >> y) { // while there's hole coordinates to read
       //find gopher's distance from (x, y)
       gopher_dist = distance(gopherX, gopherY, x, y);
       // store the returned result into answer variable
-      // FIXME3: find dog's distance from (x, y)
+      // FIXED: find dog's distance from (x, y)
+      dog_dist = distance(dogX, dogY, x, y);
       if (dog_dist >= 2*gopher_dist) {
         ostringstream oss;
         oss << fixed << showpoint << setprecision(3);
@@ -71,6 +73,7 @@ float distance(const float x1, const float y1, const float x2, const float y2) {
   float d = 0;
   // FIXME4: Find the Eucledian distance between two points on 2-d coordiantes.
   // store the distance into the `d` variable
+  
 	return d;
 }
 
