@@ -1,8 +1,8 @@
 /*
     Loops Lab
-    Updated By: FIXME1
-    CSCI 111
-    Date: FIXME2
+    Updated By: Adriel Vazquez
+    CSCI 130
+    Date: 10/9/24
 
     Program prints geometric shapes of given height with * using loops
 */
@@ -41,12 +41,18 @@ void printFlippedTriangle(int height) {
     *
     
     */
-    // FIXME3 ...
+    // FIXED ...
+ for (int row = height; row >= 1; --row) {
+    for (int col = 1; col <= row; ++col) {
+        cout << "* ";
+    }
+    cout << endl;
+    }
 }
 
 
 /*  
-FIXME4
+FIXED
 Design and implement a function that takes an integer as height and
 prints square of the given height with *.
 Square of height 5, e.g., would look like the following.
@@ -58,6 +64,14 @@ Square of height 5, e.g., would look like the following.
 *  *  *  *  *   
 
 */
+void printSquare(int height) {
+    for (int row = 1; row <= height; ++row) {
+        for (int col = 1; col <= height; ++col) {
+            cout << "* ";
+        }
+        cout << endl;
+    }
+}
 
 // function clears the screen system call
 // NOTE: system call is not a security best pracice!
@@ -72,7 +86,10 @@ void clearScreen() {
 
 int main(int argc, char* argv[]) {
     // FIXME5 add a loop to make the program to continue to run until the user wants to quit
+
+
     // FIXME6 call clearScreen function to clear the screen for each round of the loop
+    
     int height;
     cout << "Program prints geometric shapes of given height with *\n";
     cout << "Please enter the height of the shape: ";
