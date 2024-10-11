@@ -82,6 +82,19 @@
 
 | Name | Value |
 | :--- | :--- |
+| Name | 5 -- Loops |
+| Description | Shapes Lab and Dog Ghoppher Kattis |
+| Due Date | 10/10/24 |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Labs/Lab5 |
+| Self Grade | 95/100 |
+| Notes | fixed all the fixmes |
+
+
+### Lab #4
+
+| Name | Value |
+| :--- | :--- |
 | Name | 4 -- conditionals |
 | Description | Lab to find statistical values of two given numbers using user-defined functions |
 | Due Date | 10/3/24 |

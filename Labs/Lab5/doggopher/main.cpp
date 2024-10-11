@@ -38,7 +38,8 @@ void testDistance();
 
 int main(int argc, char* argv[]) {
   if (argc == 2 and string(argv[1]) == string("test")) {
-    // FIXME1: call testDistance function
+    // FIXED: call testDistance function
+    testDistance();
   }
   else {
     float gopherX, gopherY;
