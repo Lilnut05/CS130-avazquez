@@ -97,17 +97,20 @@ int main(int argc, char* argv[]) {
         cout << "Please enter the height of the shape: ";
         cin >> height;
     // call printTriangle function passing user entered height
+        cout << "\nTriangle:\n";
         printTriangle(height);
 
     // FIXED
     // Call printFlippedTriangle passing proper argument
     // Manually test the function
+        cout << "\nFlipped Triangle:\n";
         printFlippedTriangle(height);
 
     // FIXED
     // Call the function defined in FIXME4 passing proper argument
     // Manually test the function
-        printFlippedTriangle(height);
+        cout << "\nSquare:\n";
+        printSquare(height);
 
     // FIXED
     // prompt user to enter y/Y to continue anything else to quit
