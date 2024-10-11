@@ -86,30 +86,37 @@ void clearScreen() {
 
 int main(int argc, char* argv[]) {
     // FIXME5 add a loop to make the program to continue to run until the user wants to quit
+    char continueProgram;
+    do {
 
+    // FIXED call clearScreen function to clear the screen for each round of the loop
+         clearScreen();
 
-    // FIXME6 call clearScreen function to clear the screen for each round of the loop
-    
-    int height;
-    cout << "Program prints geometric shapes of given height with *\n";
-    cout << "Please enter the height of the shape: ";
-    cin >> height;
+        int height;
+        cout << "Program prints geometric shapes of given height with *\n";
+        cout << "Please enter the height of the shape: ";
+        cin >> height;
     // call printTriangle function passing user entered height
-    printTriangle(height);
+        printTriangle(height);
 
-    // FIXME7
+    // FIXED
     // Call printFlippedTriangle passing proper argument
     // Manually test the function
+        printFlippedTriangle(height);
 
-    // FIXME6
+    // FIXED
     // Call the function defined in FIXME4 passing proper argument
     // Manually test the function
+        printFlippedTriangle(height);
 
-    // FIXME9
+    // FIXED
     // prompt user to enter y/Y to continue anything else to quit
-
-    // FIXME10
+    cout << "\nDo you want to print another shape? (y/Y to continue, anything else to quit): ";
+    cin >> continueProgram;
+    }
+    // FIEXED
     // Use conditional statements to break the loop or continue the loop
+     while (continueProgram == 'y' || continueProgram == 'Y');
 
     return 0;
 }
