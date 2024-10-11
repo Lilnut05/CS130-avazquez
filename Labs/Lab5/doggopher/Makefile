@@ -8,10 +8,10 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
-PROGRAM = #FIXME
+PROGRAM = dogghoppher
 
 # list .cpp files separated by space
-CPPFILES = #FIXME
+CPPFILES = main.cpp
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file
@@ -25,17 +25,22 @@ build:
 clean:
 	@rm -f $(PROGRAM) *.o
 
-# FIXME1
+# FIXED
 # add a rule to run the program
-
+run: all
+	./$(PROGRAM)
 unittest:
 	./$(PROGRAM) test
 
-# FIXME2 - add 4 more commands to test the 4 input files
+# FIXED - add 4 more commands to test the 4 input files
 test:
 	cat 1.in | ./$(PROGRAM) | diff - 1.ans
 	cat 2.in | ./$(PROGRAM) | diff - 2.ans
-	@#FIXME - Add commands to test 4 more input files
+	@#FIXEd - Add commands to test 4 more input files
+	cat 3.in | ./$(PROGRAM) | diff - 3.ans
+	cat 4.in | ./$(PROGRAM) | diff - 4.ans
+	cat 5.in | ./$(PROGRAM) | diff - 5.ans
+	cat 6.in | ./$(PROGRAM) | diff - 6.ans
 	@echo "All test cases passed!"
 
 all: build test clean
