@@ -48,6 +48,7 @@ int main(int argc, char* argv[]) {
     // read gopher's coordinates
     cin >> gopherX >> gopherY;
     // FIXED: read dog's coordinates
+    float dogX, dogY;
     cin >> dogX >> dogY;
     while (cin >> x >> y) { // while there's hole coordinates to read
       //find gopher's distance from (x, y)
@@ -71,9 +72,9 @@ int main(int argc, char* argv[]) {
 // Function implementation
 float distance(const float x1, const float y1, const float x2, const float y2) {
   float d = 0;
-  // FIXME4: Find the Eucledian distance between two points on 2-d coordiantes.
+  // FIXED: Find the Eucledian distance between two points on 2-d coordiantes.
   // store the distance into the `d` variable
-  
+  d = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
 	return d;
 }
 
@@ -89,8 +90,35 @@ void testDistance() {
   cout << fixed << showpoint << setprecision(3) << endl;
   cout << answer << " " << expected << endl;
   assert(abs(answer-expected) < TOLERANCE);
-  // FIXME5: Write 2nd test case for distance function
-  // FIXME6: Write 3rd test case for distance function
-  // FIXME7: Write 4th test case for distance function
+  // FIXED: Write 2nd test case for distance function
+  x1 = 0.000f;
+  y1 = 1.000f;
+  x2 = 0.000f;
+  y2 = 1.000f;
+  answer = distance(x1, y1, x2, y2);
+  expected = 1.4142135623731;
+  cout << fixed << showpoint << setprecision(3) << endl;
+  cout << answer << " " << expected << endl;
+  assert(abs(answer-expected) < TOLERANCE);
+  // FIXED: Write 3rd test case for distance function
+  x1 = 0.000f;
+  y1 = 12.000f;
+  x2 = 9.000f;
+  y2 = 19.000f;
+  answer = distance(x1, y1, x2, y2);
+  expected = 11.401754251;
+  cout << fixed << showpoint << setprecision(3) << endl;
+  cout << answer << " " << expected << endl;
+  assert(abs(answer-expected) < TOLERANCE);
+  // FIXED: Write 4th test case for distance function
+  x1 = 0.000f;
+  y1 = 2.000f;
+  x2 = 4.000f;
+  y2 = 2.000f;
+  answer = distance(x1, y1, x2, y2);
+  expected = 4;
+  cout << fixed << showpoint << setprecision(3) << endl;
+  cout << answer << " " << expected << endl;
+  assert(abs(answer-expected) < TOLERANCE);
   cerr << "All test cases passed!\n";
 }
