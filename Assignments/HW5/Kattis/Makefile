@@ -20,6 +20,10 @@ $(TARGET): $(SRCS)
 unit_test:
 	./$(TARGET) test
 
+# run kattis test
+kattis_test:
+	./$(TARGET) < kattis_test.txt
+
 # Run program with default input
 run:
 	./$(TARGET)
