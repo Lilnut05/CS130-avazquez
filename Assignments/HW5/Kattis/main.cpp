@@ -2,7 +2,7 @@
 Adriel Vazquez
 10/16/24
 Kattis Fizzbuzz
-
+https://open.kattis.com/problems/fizzbuzz
 */
 
 #include <iostream>
