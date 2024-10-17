@@ -56,8 +56,8 @@ int main(){
         int attempts = 0;
         bool hasWon = false;
 
-        cout << "Hello, " << playerName << "! I'm thinking of a number between 1 and 20." << std::endl;
-        cout << "You have 6 tries to guess it!" << std::endl;
+        cout << "Hello, " << Name << "! Guess a number between 1-20" << endl;
+        cout << "You have 6 tries to guess it!" << endl;
 
         while (attempts < 6) {
             int guess = readNumber();
@@ -65,7 +65,7 @@ int main(){
 
             int result = checkGuess(guess, secretNumber);
             if (result == 0) {
-                cout << "Congratulations! You guessed it in " << attempts << " tries!" << std::endl;
+                cout << "Congratulations! You guessed it in " << attempts << " attempts!" << endl;
                 hasWon = true;
                 gamesWon++;
                 break; //Exits the loop
@@ -78,7 +78,7 @@ int main(){
 
         //Guess incorrect
         if (!hasWon) {
-            cout << "Sorry, you didn't guess the number. It was " << secretNumber << "." << std::endl;
+            cout << "Sorry, you didn't guess the number. It was " << secretNumber << "." << endl;
         }
 
         gamesPlayed++;
@@ -93,11 +93,11 @@ int main(){
 
     //Game Sum {Bonus}
     cout << "\nGame Over. Goodbye " << Name << endl;
-    cout << "Games Played: " << gamesPlayed << std::endl;
-    cout << "Games Won: " << gamesWon << std::endl;
+    cout << "Games Played: " << gamesPlayed << endl;
+    cout << "Games Won: " << gamesWon << endl;
     if (gamesPlayed > 0) {
         double winPercentage = (static_cast<double>(gamesWon) / gamesPlayed) * 100.0;
-        std::cout << "Winning Percentage: " << winPercentage << "%" << std::endl;
+        cout << "Winning Percentage: " << winPercentage << "%" << endl;
     }
 
     return 0;
