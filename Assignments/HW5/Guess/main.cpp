@@ -98,6 +98,11 @@ int main(){
     if (gamesPlayed > 0) {
         double winPercentage = (static_cast<double>(gamesWon) / gamesPlayed) * 100.0;
         cout << "Winning Percentage: " << winPercentage << "%" << endl;
+        if (gamesPlayed > gamesWon)
+        {
+            cout << "Haha bad ratio L";
+        }
+        
     }
 
     return 0;
