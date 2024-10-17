@@ -21,8 +21,8 @@ cin >> guess;
 
 //Check if input is valid
 while (guess < 1 || guess > 20) {
-        std::cout << "Invalid number. Please enter a number between 1 and 20: ";
-        std::cin >> guess;
+        cout << "Invalid number. Please enter a number between 1 and 20: ";
+        cin >> guess;
     }
     return guess;
 }
@@ -39,6 +39,67 @@ int checkGuess(int guess, int secretNumber) {
 }
 
 int main(){
+ srand(static_cast<unsigned int>(time(0)));
 
+    cout << "Welcome to Guess the Number!!!!!!!" << endl;
+    string Name;
+    cout << "Please enter your name: ";
+    cin >> Name;
+
+    char playAgain = 'y';
+    int gamesPlayed = 0;
+    int gamesWon = 0;
+
+    // Loop for playing the game
+    while (playAgain == 'y' || playAgain == 'Y') {
+        int secretNumber = randomNumber();
+        int attempts = 0;
+        bool hasWon = false;
+
+        cout << "Hello, " << playerName << "! I'm thinking of a number between 1 and 20." << std::endl;
+        cout << "You have 6 tries to guess it!" << std::endl;
+
+        while (attempts < 6) {
+            int guess = readNumber();
+            attempts++;
+
+            int result = checkGuess(guess, secretNumber);
+            if (result == 0) {
+                cout << "Congratulations! You guessed it in " << attempts << " tries!" << std::endl;
+                hasWon = true;
+                gamesWon++;
+                break; //Exits the loop
+            } else if (result == -1) {
+                cout << "Too low! Try again." << endl;
+            } else {
+                cout << "Too high! Try again." << endl;
+            }
+        }
+
+        //Guess incorrect
+        if (!hasWon) {
+            cout << "Sorry, you didn't guess the number. It was " << secretNumber << "." << std::endl;
+        }
+
+        gamesPlayed++;
+        cout << "Do you want to play again? (y/n): ";
+        cin >> playAgain;
+
+        //Loop Command
+        if (playAgain != 'y' && playAgain != 'Y') {
+            playAgain = 'n';
+        }
+    }
+
+    //Game Sum {Bonus}
+    cout << "\nGame Over. Goodbye " << Name << endl;
+    cout << "Games Played: " << gamesPlayed << std::endl;
+    cout << "Games Won: " << gamesWon << std::endl;
+    if (gamesPlayed > 0) {
+        double winPercentage = (static_cast<double>(gamesWon) / gamesPlayed) * 100.0;
+        std::cout << "Winning Percentage: " << winPercentage << "%" << std::endl;
+    }
+
+    return 0;
 };
 
