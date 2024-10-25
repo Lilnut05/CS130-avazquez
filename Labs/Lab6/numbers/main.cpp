@@ -59,12 +59,12 @@ void program() {
     findMaxAndMin(nums, size, max, min);
     printf("Max = %u\n", max);
     //FIXED: print Min value
-	printf("Min = %u\n", min)
+	printf("Min = %u\n", min);
     printf("Sum = %lld\n",findSum(nums, size));
     cout << "Sorted list in ascending order:\n";
     bubbleSort(nums, size);
     //FIXED: print sorted array
-	printf("Sorted List:")
+	printf("Sorted List:");
 	bubbleSort(nums, size);
 	printArray(nums, size);
     delete [] nums;
