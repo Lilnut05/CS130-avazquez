@@ -90,7 +90,20 @@
 
 ## Labs
 
-### Lab #4
+
+### Lab #5
+
+| Name | Value |
+| :--- | :--- |
+| Name | 6 -- Arrays|
+| Description | Numberas Lab and Modulo Kattis |
+| Due Date | 10/25/24 |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Labs/Lab6 |
+| Self Grade | 95/100 |
+| Notes | fixed all the fixmes |
+
+### Lab #5
 
 | Name | Value |
 | :--- | :--- |
