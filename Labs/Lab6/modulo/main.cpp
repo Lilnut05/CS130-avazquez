@@ -1,9 +1,9 @@
 /*
 Kattis - Module
 Arrays Lab
-Updated By: FIXME
-CSCI 111
-Date: FIXME
+Updated By: Adriel Vazquez
+CSCI 130
+Date: 10/17/24
 
 Read and solve the Kattis problem: https://open.kattis.com/problems/modulo  
 
@@ -32,8 +32,11 @@ void testCountFlags();
 int main(int argc, char* argv[])
 {
   if (argc == 2 and string(argv[1]) == string("test")) {
-    // FIXME1: call testGetModulo42()
-    // FIXME2: call testCountFlags()
+    // FIXED: call testGetModulo42()
+    testGetModulo42();
+    // FIXED: call testCountFlags()
+    testCountFlags();
+    size_t countFlags(const bool[], size_t), size_t
   }
   else {
     // create a dynamic unsigned int array of size 10 to store numbers
@@ -44,7 +47,8 @@ int main(int argc, char* argv[])
     bool * flags = new bool[42];
     initFlags(flags, 42);
     updateFlags(nums, flags, 10);
-    //FIXME3 - call countFlags function passing proper argument and print the result
+    //FIXED - call countFlags function passing proper argument and print the result
+    size_t unique_modulo_values = countFlags(flags, 42);
   }
 	return 0;
 }
@@ -87,7 +91,10 @@ void testGetModulo42() {
   assert(getModulo42(41) == 41);
   assert(getModulo42(42) == 0);
   assert(getModulo42(43) == 1);
-  // FIXME6: Write 3 more test cases
+  // FIXED: Write 3 more test cases
+  assert(getModulo42(40) == 40);
+  assert(getModulo42(48) == 6);
+  assert(getModulo42(49) == 7);
   cerr << "getModulo42(): All test cases passed!" << endl;
 }
 
