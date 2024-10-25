@@ -8,10 +8,10 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
-PROGRAM = #FIXME
+PROGRAM = main
 
 # list .cpp files separated by space
-CPPFILES = #FIXME
+CPPFILES = main.cpp
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file
@@ -25,17 +25,27 @@ build:
 clean:
 	@rm -f $(PROGRAM) *.o
 
-# FIXME1
+# FIXED
 # add a rule to run the program
+run: all
+	./$(PROGRAM)
 
 unittest:
 	./$(PROGRAM) test
 
-# FIXME2 - add 4 more commands to test the 4 input files
+# FIXED - add 4 more commands to test the 4 input files
 kattis_test:
 	cat 1.in | ./$(PROGRAM) | diff - 1.ans
 	cat 2.in | ./$(PROGRAM) | diff - 2.ans
-	@#FIXME - Add commands to test 4 more input files
+	cat 3.in | ./$(PROGRAM) | diff - 3.ans
+	cat 4.in | ./$(PROGRAM) | diff - 4.ans
+	cat 5.in | ./$(PROGRAM) | diff - 5.ans
+	cat 6.in | ./$(PROGRAM) | diff - 6.ans
+	@#FIXED - Add commands to test 4 more input files
+	cat 7.in | ./$(PROGRAM) | diff - 7.ans
+	cat 8.in | ./$(PROGRAM) | diff - 8.ans
+	cat 9.in | ./$(PROGRAM) | diff - 9.ans
+	cat 10.in | ./$(PROGRAM) | diff - 10.ans
 	@echo "All kattis test cases passed!"
 
 all: build unitest kattis_test clean
