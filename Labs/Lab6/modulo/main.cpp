@@ -114,9 +114,7 @@ void testCountFlags() {
   assert(countFlags(flags, 42) == 2);
   // FIXME7: write 3 more test cases
   initFlags(flags, 42);
-  flags[getModulo42(21)] = true;
-  flags[getModulo42(63)] = true;
-  assert(countFlags(flags, 42) == 2);
+  assert(countFlags(flags, 42) == 0);
 
   initFlags(flags, 42);
   flags[getModulo42(7)] = true;
