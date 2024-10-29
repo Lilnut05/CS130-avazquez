@@ -14,6 +14,17 @@
 
 ## Assignments
 
+### Assignment #7
+| Name | Value |
+| :--- | :--- |
+| Name | Arrays |
+| Description | HW6 Arroays, linethemup and fallingapart Kattis|
+| Due Date | 10/28/24 |
+| Status | Complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/HW6 |
+| Self Grade | 90/100 |
+| Notes | Completed HW 6 |
+
 ### Assignment #6
 | Name | Value |
 | :--- | :--- |
