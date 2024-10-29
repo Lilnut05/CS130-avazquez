@@ -40,4 +40,34 @@ int main(int argc, char* argv[]) {
         string expectedResults[4] = {"INCREASING", "DECREASING", "NEITHER", "INCREASING"};
         bool allTestsPassed = true;
 
-        for (int i = 0; i < 4; i++) {}
+        for (int i = 0; i < 4; i++) {
+            string result = checkOrder(testCases[i]);
+            if (result == expectedResults[i]) {
+                cout << "Test " << i + 1 << " passed." << endl;
+            } else {
+                cout << "Test " << i + 1 << " failed. Expected: " 
+                     << expectedResults[i] << ", Got: " << result << endl;
+                allTestsPassed = false;
+            }
+        }
+
+        if (allTestsPassed) {
+            cout << "All unit tests passed!" << endl;
+        } else {
+            cout << "Some tests failed." << endl;
+        }
+    } else {
+        // Regular program execution
+        int n;
+        cin >> n;
+        vector<string> names(n);
+
+        for (int i = 0; i < n; i++) {
+            cin >> names[i];
+        }
+
+        cout << checkOrder(names) << endl;
+    }
+
+    return 0;
+}
