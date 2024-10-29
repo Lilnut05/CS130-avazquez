@@ -3,6 +3,7 @@ Adriel Vazquez
 10/28/24
 HW 6 Kattis Line them Up
 */
+#include <iostream>
 #include <vector>
 #include <string>
 
