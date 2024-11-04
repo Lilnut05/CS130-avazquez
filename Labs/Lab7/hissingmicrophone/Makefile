@@ -8,7 +8,7 @@ CXX = g++
 CXXFLAGS = -c -g -Wall -std=c++17
 
 # the build target executable file; .exe is not required
-PROGRAM = simonsays.exe
+PROGRAM = hissingmicrophone.exe
 
 # list .cpp files separated by space
 CPPFILES = main.cpp
@@ -41,3 +41,4 @@ kattistest:
 
 all: build unittest clean
 	@printf "All good!\n"
+	
