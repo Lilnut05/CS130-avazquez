@@ -1,8 +1,8 @@
 /*
 Kattis - Simon Says
 
-Updated By: FIXME
-Date: FIXME
+Updated By: Adriel Vazquez
+Date: 1/3/24
 
 Problem Statement: https://open.kattis.com/problems/simonsays 
 Algorithm steps:
@@ -28,6 +28,7 @@ void solve();
 int main(int argc, char* argv[]) {
   if (argc == 2 and string(argv[1]) == "test") {
     // FIXME1: call testAnswer function
+    testAnswer();
   }
   else
     solve();
@@ -37,6 +38,11 @@ string answer(const string &line) {
   // FIXME2: If the line starts with "Simon says", return rest of the line after says
   // including the space after says, otherwise return empty string ""
   // Hint: use find method on line object
+   string prefix = "Simon says";
+    size_t pos = line.find(prefix);
+    if (pos == 0) {  // "Simon says" is at the start of the line
+    return line.substr(prefix.length() + 1);
+    }
   return "";
 }
 
@@ -48,6 +54,12 @@ void testAnswer() {
   assert(ans == " laugh!"); 
   assert(answer("Write more programs.") == "");
   // FIXME3: write at least two test cases to test answer()
+  ans = answer("Do a cartwheel.");
+  assert(ans == "");
+  ans = answer("Simon says jump");
+  assert(ans == "jump");
+  ans = answer("Say cheese");
+  assert(ans == "");
   cerr << "All test cases passed!\n";
 }
 
@@ -57,12 +69,16 @@ void solve() {
   int N;
   cin >> N;
   //FIXME4 : read and discard \n left behind
+  cin.ignore();
   while (N--) {
     // Note: i. string consists of phrase with spaces
     // ii. don't print an empty line if the line doesn't start with "Simon says"
     // FIXME5: read the whole line into line 
+     getline(cin, line);
     // FIXME6: call answer function and store the returned value into ans
+    ans = answer(line);
     if (ans == "") continue;
     // FIXME7: print ans
+     cout << ans << endl;
   }
 }
