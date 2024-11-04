@@ -101,8 +101,19 @@
 
 ## Labs
 
+### Lab #7
 
-### Lab #5
+| Name | Value |
+| :--- | :--- |
+| Name | 7 -- Strings |
+| Description | Simon Says and Hissing Microphone Kattis |
+| Due Date | ? |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Labs/Lab7 |
+| Self Grade | 95/100 |
+| Notes | fixed all the fixmes |
+
+### Lab #6
 
 | Name | Value |
 | :--- | :--- |

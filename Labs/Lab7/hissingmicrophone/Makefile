@@ -34,9 +34,10 @@ unittest:
 
 # test the kattis provided samples
 kattistest:
-	cat ./sample_tests/1.in | ./$(PROGRAM) | diff - ./sample_tests/1.ans
-	cat ./sample_tests/2.in | ./$(PROGRAM) | diff - ./sample_tests/2.ans
-	cat ./sample_tests/3.in | ./$(PROGRAM) | diff - ./sample_tests/3.ans
+	cat 1.in | ./$(PROGRAM) | diff - 1.ans
+	cat 2.in | ./$(PROGRAM) | diff - 2.ans
+	cat 3.in | ./$(PROGRAM) | diff - 3.ans
+	cat 3.in | ./$(PROGRAM) | diff - 4.ans
 	@echo "All Test Cases Passed!"
 
 all: build unittest clean
