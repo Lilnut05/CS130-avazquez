@@ -127,7 +127,18 @@ void test_splitString() {
   splitString(answer, "two word");
   vector<string> expected1 = {"two", "word"};
   assert(answer == expected1);
-  // FIXME4: add 2 more test cases
+  // FIXED: add 2 more test cases
+
+  answer.clear();
+  splitString(answer, "cheese cheese cheese");
+  vector<string> expected2 = {"cheese", "cheese", "cheese"};
+  assert(answer == expected2);
+
+  answer.clear();
+  splitString(answer, "test four");
+  vector<string> expected3 = {"test", "four"};
+  assert(answer == expected3);
+
   cerr << "splitString(): All test cases passed!)\n";
 }
 
@@ -136,7 +147,18 @@ void test_eraseAnimalSound() {
   eraseAnimalSound(recordings, "bo");
   vector<string> expected = {"boo", "meow", "ba", "wooon"};
   assert(recordings == expected);
-  // FIXME5: add 2 more test cases
+  // FIXED: add 2 more test cases
+
+  recordings = {"quack", "bark", "quack", "chirp"};
+  eraseAnimalSound(recordings, "quack");
+  expected = {"bark", "chirp"};
+  assert(recordings == expected);
+
+  recordings = {"oink", "oink", "boof", "oink"};
+  eraseAnimalSound(recordings, "oink");
+  expected = {"boof"};
+  assert(recordings == expected);
+
   cerr << "eraseAnimalSound(): All test cases passed!" << endl;
 }
 
