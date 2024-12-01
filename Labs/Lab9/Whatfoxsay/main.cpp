@@ -1,9 +1,9 @@
 /*
 Kattis - What does the fox say?
 Vector Lab
-Updated By: FIXME
-CSCI 111
-Date: FIXME
+Updated By: Adriel V
+CSCI 131
+Date: 12/1/24
 
 Read and solve the Kattis problem: https://open.kattis.com/problems/whatdoesthefoxsay   
 
@@ -169,7 +169,17 @@ void test_foxSays() {
   string ans = foxSays(recordings);
   cerr << "ans = " << ans << endl;
   assert(ans == "boo meow ba wooon");
-  // FIXME6: add 2 more test cases
+  // FIXED: add 2 more test cases
+
+  recordings = {"chirp", "chirp", "chirp"};
+    eraseAnimalSound(recordings, "chirp");
+    ans = foxSays(recordings);
+    assert(ans == "");
+
+    recordings = {"woof", "meow", "woof"};
+    eraseAnimalSound(recordings, "woof");
+    ans = foxSays(recordings);
+    assert(ans == "meow");
   cerr << "foxSays(): All test cases passed!" << endl;
 }
 
