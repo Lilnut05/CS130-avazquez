@@ -42,7 +42,8 @@ void unit_test();
 
 int main(int argc, char* argv[]) {
   if (argc == 2 and string(argv[1]) == string("test")) {
-    // FIXME1: call unit_test function
+    // FIXED: call unit_test function
+    unit_test();
   }
   // read the total number of test cases
   else
@@ -74,7 +75,8 @@ void solve() {
       iss >> animal >> goes >> sound;
       eraseAnimalSound(recordings, sound);
     }
-    // FIXME2: call foxSays function and print the returned answer
+    // FIXED: call foxSays function and print the returned answer
+    cout << foxSays(recordings) << endl;
   }
 }
 
@@ -103,9 +105,17 @@ void splitString(vector<string> &words, string text) {
 
 void eraseAnimalSound(vector<string> &recordings, string sound) {
   // see how erase works here: https://en.cppreference.com/w/cpp/container/vector/erase 
-  // FIXME3 - use iterator to erase all matching sound
+  // FIXED - use iterator to erase all matching sound
   // if iterator points to sound, erase it and update it with the next element pointer
   // otherwise, just increment the iterator
+  for (auto it = recordings.begin(); it != recordings.end();) {
+        if (*it == sound) {
+            it = recordings.erase(it);
+        } else {
+            ++it;
+        }
+    }
+
 }
 
 void test_splitString() {
