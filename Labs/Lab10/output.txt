@@ -1,7 +1,6 @@
-List of Numbers: 100 10 5 0 -99 10 99
-
-========================================
-          Statistical Results
-========================================
-Max     Min     Mean     Median    Range
-100     -99     17.86        10      199   
+Numbers: 100 10 5 0 -99 10 99 
+Max: 100
+Min: -99
+Mean: 17.8571
+Range: 199
+Median: 10.0000

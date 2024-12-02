@@ -25,7 +25,10 @@ build:
 clean:
 	rm -f $(PROGRAM) *.o
 
-# FIXME
+# FIXED
+run:
+	./$(PROGRAM)
+
 # add a rule to run the program
 
 # rule to run unittest
