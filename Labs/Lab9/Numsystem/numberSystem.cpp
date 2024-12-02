@@ -1,8 +1,8 @@
 /*
     CS1 - Vector Lab
 
-    Updated by: FIXME
-    Date: FIXME
+    Updated by: Adriel Vazquez
+    Date: 11/11/24
 
     Program: Number system converter  
 
@@ -57,11 +57,11 @@ int main()
         switch(choice) {
             case 1:
                 // FIXME1
-                cout << "FIXME\n";
+                cout << "Convert Binary\n";
                 break;
             case 2:
                 // FIXME2
-                cout << "FIXME\n";
+                cout << "Convert decimal\n";
                 break;
             case 3:
                 cout << "Enter a positive whole decimal number: ";
@@ -93,6 +93,7 @@ int main()
 string decToBin(llu num) {
     // FIXME3 - implement algorithm step in Ch03-StdInputOutput chapter
     // or use hint from decToOct function
+
     return to_string(num);
 }
 

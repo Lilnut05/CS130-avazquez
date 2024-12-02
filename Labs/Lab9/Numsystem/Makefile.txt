@@ -4,14 +4,14 @@ CXX = g++
 # -g: adds debugging information to the executable file
 # -Wall: turns on most, but not  all, compiler warnings
 # -std=c++17: uses c++17 standard
-# add all the required flags separated by space
-CXXFLAGS = -c -g -Wall -std=c++17
+# put all the required flags separated by space
+CXXFLAGS = -c -g -Wall -std=gnu++17
 
 # the build target executable file; .exe is not required
-PROGRAM = numberSystem.exe #FIXME1
+PROGRAM = main.exe #FIXED
 
 # list .cpp files separated by space
-CPPFILES = numberSystem.cpp #FIXME2
+CPPFILES = main.cpp #FIXED
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file
@@ -23,10 +23,11 @@ build:
 # make clean rule
 # delete object and binary files
 clean:
-	rm -f $(PROGRAM) *.o
+	@rm -f $(PROGRAM) *.o
 
-# FIXME
-# add a rule to run the program
+# FIXED - add rule to run unittest functions
+unittest:
+	@./$(PROGRAM) test
 
-all: build run clean
-	@echo "All done..."
+all: build test clean
+	@echo "All done!"
