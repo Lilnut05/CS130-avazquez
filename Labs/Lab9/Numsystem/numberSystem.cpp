@@ -56,12 +56,18 @@ int main()
         choice = menuOption();
         switch(choice) {
             case 1:
-                // FIXME1
-                cout << "Convert Binary\n";
+                // FIXED
+                cout << "Enter a decimal to convert into binary \n";
+                cin >> decimalNum;
+                binary = decToBin(decimalNum);
+                cout << decimalNum << " in binary is " << binary << endl;
                 break;
             case 2:
-                // FIXME2
-                cout << "Convert decimal\n";
+                // FIXed
+                cout << "Enter binary to convert into decimal\n";
+                cin >> binary;
+                decimalNum = binToDec(binary);
+                cout << binary << " in decimal is " << decimalNum << endl;
                 break;
             case 3:
                 cout << "Enter a positive whole decimal number: ";

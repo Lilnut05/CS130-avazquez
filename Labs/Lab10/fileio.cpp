@@ -1,8 +1,8 @@
 /*
     CS1 - File IO Lab
 
-    Updated by: FIXME
-    Date: FIXME
+    Updated by: Adriel V
+    Date:12/1/24
 
     The program reads numbers from a file and finds statistical values from those numbers.
     Lab demonstrates the file io and vector application. 
@@ -54,7 +54,16 @@ int main(int argc, char* argv[]) {
 void readData(vector<int> & numbers, const string inputFileName) {
     // FIXME1: Open inputFileName for reading data
     // read the data until eof marker and store each num into numbers vector
+    ifstream inFile(inputFileName);
+    if (!inputFile.is_open()) {
+    cout << "Error opening file: " << inputFileName << endl;
+    return;
+    }
     int num;
+      while (inputFile >> num) { //Eof
+        numbers.push_back(num);
+    }
+    inputFile.close();
 }
 
 void writeData(const vector<int> & numbers) {
@@ -65,6 +74,7 @@ void writeData(const vector<int> & numbers) {
     2. Store and use the file name to open the file in write mode
     3. Write output as shown in output.txt file with proper formatting using iomanip
     */
+   
 }
 
 int findMax(const vector<int> & nums) {
