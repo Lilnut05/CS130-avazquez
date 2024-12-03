@@ -11,7 +11,7 @@ CXXFLAGS = -c -g -Wall -std=gnu++17
 PROGRAM = main.exe #FIXED
 
 # list .cpp files separated by space
-CPPFILES = main.cpp #FIXED
+CPPFILES = numberSystem.cpp #FIXED
 
 # make all rule/default rule that'll be run when we run "make"
 # first compile each file to object file

@@ -101,6 +101,30 @@
 
 ## Labs
 
+### Lab #10
+
+| Name | Value |
+| :--- | :--- |
+| Name | 10 -- fileio |
+| Description | fileio |
+| Due Date | ? |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Labs/Lab10 |
+| Self Grade | 85/100 |
+| Notes | fixed all the fixmes |
+
+### Lab #9
+
+| Name | Value |
+| :--- | :--- |
+| Name | 9 -- Foxsays |
+| Description | Number system and what does the fox say kattis |
+| Due Date | ? |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Labs/Lab9 |
+| Self Grade | 90/100 |
+| Notes | fixed all the fixmes and submitted kattis|
+
 ### Lab #7
 
 | Name | Value |

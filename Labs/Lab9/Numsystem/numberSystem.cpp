@@ -97,17 +97,30 @@ int main()
 }
 
 string decToBin(llu num) {
-    // FIXME3 - implement algorithm step in Ch03-StdInputOutput chapter
+    // FIXED - implement algorithm step in Ch03-StdInputOutput chapter
     // or use hint from decToOct function
-    
-    return to_string(num);
+    string binary = "";
+    if (num == 0) return "0";
+    while (num > 0) {
+        binary = to_string(num % 2) + binary;
+        num /= 2;
+    }
+    return binary;
 }
 
 llu binToDec(string binaryNumber)
 {
-    // FIXME4 - implement algorithm described in Ch03-StdInputOutput chapter
+    // FIXED - implement algorithm described in Ch03-StdInputOutput chapter
     // or use hints from binToOct function
-    return 0;
+    llu decimal = 0;
+    llu power = 1;
+    for (int i = binaryNumber.size() - 1; i >= 0; i--) {
+        if (binaryNumber[i] == '1') {
+            decimal += power;
+        }
+        power *= 2;
+    }
+    return decimal;
 }
 
 string decToOct(llu num)
