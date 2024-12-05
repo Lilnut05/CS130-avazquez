@@ -28,3 +28,17 @@
 % "Amount" respectively.  Optionally, you may use the "table(...)" function
 % but, if you do, you must use it correctly.
 
+% Constants
+A0 = 64;
+h = 5730;
+time_interval = 1500;
+max_time = 24000;
+
+% Display column headings
+disp('Years     Amount (grams)');
+
+% Loop through each time interval and calculate the remaining Carbon-14
+for t = 0:time_interval:max_time
+    A = A0 * (1 / 2) ^ (t / h);  % Decay formula for calculations of half life
+    fprintf('%5d     %10.2f\n', t, A);  % Displays results
+end
