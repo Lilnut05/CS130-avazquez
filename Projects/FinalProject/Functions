@@ -77,6 +77,103 @@ bool checkWin(char symbol) {
 }
 
 bool checkTie() {
-
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            if (grid[i][j] == ' ') {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 
+void SinglePlayer(char PSymbol) {
+    char CSymbol = (PSymbol == 'X') ? 'O' : 'X';
+    initializeGrid();
+
+    while (true) {
+        displayGrid();
+        PMove(PSymbol);
+
+        if (checkWin(PSymbol)) {
+            cout << "You win!" << endl;
+            gamesWon++;
+            winStreak++;
+            checkSecretWin();
+            break;
+        }
+
+        if (checkTie()) {
+            cout << "It's a tie!" << endl;
+            break;
+        }
+
+        CMove(CSymbol);
+
+        if (checkWin(CSymbol)) {
+            cout << "Computer wins!" << endl;
+            winStreak = 0;
+            break;
+        }
+    }
+}
+
+void TwoPlayer() {
+    char player1 = 'X', player2 = 'O';
+    initializeGrid();
+
+    while (true) {
+        displayGrid();
+        PMove(player1);
+        if (checkWin(player1)) {
+            cout << "Player X wins!" << endl;
+            gamesWon++;
+            winStreak++;
+            checkSecretWin();
+            break;
+        }
+
+        if (checkTie()) {
+            cout << "It's a tie!" << endl;
+            break;
+        }
+
+        displayGrid();
+        PMove(player2);
+        if (checkWin(player2)) {
+            cout << "Player O wins!" << endl;
+            winStreak = 0;
+            break;
+        }
+
+        if (checkTie()) {
+            cout << "It's a tie!" << endl;
+            break;
+        }
+    }
+}
+
+void saveStats() {
+    ofstream outFile("gameStats.txt");
+    outFile << "Games won: " << gamesWon << endl;
+    outFile << "Win streak: " << winStreak << endl;
+    outFile.close();
+}
+
+void checkSecretWin() {
+    if (winStreak == 5) {
+        cout << "            __________\n";
+        cout << "          |           |\n";
+        cout << "         |_____________|\n";
+        cout << "          \\           /\n";
+        cout << "           \\         /\n";
+        cout << "            |_______|\n";
+        cout << "               | |\n";
+        cout << "               | |\n";
+        cout << "               | |\n";
+        cout << "              /   \\\n";
+        cout << "             /     \\\n";
+        cout << "            '-------'\n";
+        cout << " Congratulations, you are the TOP G!!!!"
+    }
+}

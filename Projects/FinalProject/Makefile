@@ -1,25 +1,23 @@
 CXX = g++
 
 CXXFLAGS = -std=c++11 -Wall
-# the build target executable file; .exe is not required
-PROGRAM = Final
 
-# list .cpp files separated by space
-SRC = Functions.cpp Final.cpp
+TARGET = Final
 
-# Rule to create the final executable
-$(PROGRAM): Final.o Functions.o
-	$(CXX) $(CXXFLAGS) -o $(PROGRAM) Final.o Functions.o
+# Source files
+SRC = Final.cpp
+
+$(TARGET): Functions.o Final.o
+	$(CXX) $(CXXFLAGS) -o $(TARGET) Functions.o Final.o
 
 Final.o: Final.cpp Final.h
 	$(CXX) $(CXXFLAGS) -c Final.cpp
 
-run:
-	./$(PROGRAM)
+Functions.o: Functions.cpp Final.h
+	$(CXX) $(CXXFLAGS) -c Functions.cpp
 
-# make clean rule
-# delete object and binary files
+# Clean rule to remove generated files
 clean:
-	rm -f $(PROGRAM) *.o
+	rm -f *.o $(TARGET)
 
 
