@@ -40,6 +40,14 @@ void displayGrid() {
         cout << endl;
     }
 }
+//Play again
+bool playAgain() {
+    char choice;
+    cout << "Do you want to play again? (Y/N): ";
+    cin >> choice;
+    return (choice == 'Y' || choice == 'y');
+}
+
 //Players move and check
 void PMove(char PSymbol) {
     int move;
@@ -92,68 +100,81 @@ bool checkTie() {
 }
 //Single player
 void SinglePlayer(char PSymbol) {
-    char CSymbol = (PSymbol == 'X') ? 'O' : 'X';
-    initializeGrid();
+    char CSymbol = (PSymbol == 'X') ? 'O' : 'X';  // Assign the opposite symbol to the computer
+    bool continuePlaying = true;
 
-    while (true) {
-        displayGrid();
-        PMove(PSymbol);
+    while (continuePlaying) {
+        initializeGrid();
 
-        if (checkWin(PSymbol)) {
-            cout << "You win!" << endl;
-            gamesWon++;
-            winStreak++;
-            checkSecretWin();
-            break;
+        while (true) {
+            displayGrid();
+            PMove(PSymbol);  // Player moves
+
+            if (checkWin(PSymbol)) {
+                cout << "You win!" << endl;
+                gamesWon++;
+                winStreak++;
+                checkSecretWin();
+                break;
+            }
+
+            if (checkTie()) {
+                cout << "It's a tie!" << endl;
+                break;
+            }
+
+            CMove(CSymbol);  // Computer moves
+
+            if (checkWin(CSymbol)) {
+                cout << "Computer wins!" << endl;
+                winStreak = 0;
+                break;
+            }
         }
 
-        if (checkTie()) {
-            cout << "It's a tie!" << endl;
-            break;
-        }
-
-        CMove(CSymbol);
-
-        if (checkWin(CSymbol)) {
-            cout << "Computer wins!" << endl;
-            winStreak = 0;
-            break;
-        }
+        continuePlaying = playAgain();  // Ask if the player wants to play again
     }
 }
-//Two player
+
+// Two-player
 void TwoPlayer() {
-    char player1 = 'X', player2 = 'O';
-    initializeGrid();
+    bool continuePlaying = true;
+    
+    while (continuePlaying) {
+        char player1 = 'X', player2 = 'O';
+        initializeGrid();
 
-    while (true) {
-        displayGrid();
-        PMove(player1);
-        if (checkWin(player1)) {
-            cout << "Player X wins!" << endl;
-            gamesWon++;
-            winStreak++;
-            checkSecretWin();
-            break;
+        while (true) {
+            displayGrid();
+            PMove(player1);  // Player 1 makes a move
+            if (checkWin(player1)) {
+                cout << "Player X wins!" << endl;
+                gamesWon++;
+                winStreak++;
+                checkSecretWin();
+                break;
+            }
+
+            if (checkTie()) {
+                cout << "It's a tie!" << endl;
+                break;
+            }
+
+            displayGrid();
+            PMove(player2);  // Player 2 makes a move
+            if (checkWin(player2)) {
+                cout << "Player O wins!" << endl;
+                winStreak = 0;
+                break;
+            }
+
+            if (checkTie()) {
+                cout << "It's a tie!" << endl;
+                break;
+            }
         }
 
-        if (checkTie()) {
-            cout << "It's a tie!" << endl;
-            break;
-        }
-
-        displayGrid();
-        PMove(player2);
-        if (checkWin(player2)) {
-            cout << "Player O wins!" << endl;
-            winStreak = 0;
-            break;
-        }
-
-        if (checkTie()) {
-            cout << "It's a tie!" << endl;
-            break;
-        }
+        continuePlaying = playAgain();  // Ask if the players want to play again
     }
 }
 //saves stats
@@ -182,6 +203,6 @@ void checkSecretWin() {
         cout << " Congratulations, you are the TOP G!!!!";
     }
     else if (winStreak == 3) {
-        cout << "Congrats you found the sEECret winscreen!!"
+        cout << "Congrats you found the sEECret winscreen!!";
     }
 }

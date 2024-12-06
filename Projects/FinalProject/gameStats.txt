@@ -1,2 +1,2 @@
-Games won: 0
-Win streak: 0
+Games won: 1
+Win streak: 1
