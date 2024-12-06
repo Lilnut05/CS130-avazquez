@@ -4,11 +4,11 @@ CXXFLAGS = -std=c++11 -Wall
 
 TARGET = Final
 
-# Source files
-SRC = Final.cpp
+SRC = Functions.cpp Final.cpp
 
 $(TARGET): Functions.o Final.o
 	$(CXX) $(CXXFLAGS) -o $(TARGET) Functions.o Final.o
+
 
 Final.o: Final.cpp Final.h
 	$(CXX) $(CXXFLAGS) -c Final.cpp
