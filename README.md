@@ -244,9 +244,9 @@
 | Description | Create a game of tictactoe |
 | Due Date | 12/13/24 |
 | Status | complete |
-| Location | https://github.com/Lilnut05/CS130-avazquez/projects/project1 |
+| Location | https://github.com/Lilnut05/CS130-avazquez/projects/FinalProject |
 | Self Grade | 90/100 |
-| Notes | Created the program to calculate distance angle and max height of projectile |
+| Notes | Created a game of tictactoe that could be played with a CPU or with another player, With some secrets. |
 
 
 ### Project 1
