@@ -14,6 +14,16 @@
 
 ## Assignments
 
+### Assignment #MatLabHW2
+| Name | Value |
+| :--- | :--- |
+| Name | MLHW2 |
+| Description |Create a script in Matlab to determine the time and amount for carbon fourteen half life|
+| Due Date | ? |
+| Status | Complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/tree/main/Assignments/Matlab/MHW2 |
+| Self Grade | 90/100 |
+| Notes | Completed |
 
 ### Assignment #MatLabHW1
 | Name | Value |
@@ -225,6 +235,19 @@
 | Notes | fixed all the fixmes |
 
 ## Projects
+
+### Project Final
+
+| Name | Value |
+| :--- | :--- |
+| Name | Final - Tic Tac TOE |
+| Description | Create a game of tictactoe |
+| Due Date | 12/13/24 |
+| Status | complete |
+| Location | https://github.com/Lilnut05/CS130-avazquez/projects/project1 |
+| Self Grade | 90/100 |
+| Notes | Created the program to calculate distance angle and max height of projectile |
+
 
 ### Project 1
 

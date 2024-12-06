@@ -5,43 +5,30 @@ A program that allows the user to play tic tac toe against a CPU, or another pla
 */
 
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <fstream>
+#include "Final.h"
+
 using namespace std;
 
-// Functions
-void displayWelcome();
-char choosePSymbol();
-void initializeBoard();
-void displayBoard();
-void PMove(char PSymbol);
-void CMove(char CSymbol);
-bool checkWin(char symbol);
-bool checkTie();
-void SinglePlayerGame(char PSymbol);
-void TwoPlayerGame();
-void saveStats();
-
-
 int main() {
-
-}
-
-// Function Definitions
-void displayWelcome() {
-    cout << "Welcome to Tic-Tac-Toe!" << endl;
-}
-
-char choosePSymbol() {
+    int choice;
     char symbol;
-    do {
-        cout << "Choose your symbol (X or O): ";
-        cin >> symbol;
-    } while (symbol != 'X' && symbol != 'O');
-    return symbol;
-}
 
-void initializeBoard() {
+    displayWelcome();
 
+    cout << "Choose:\n1. Single Player\n2. Two Player\n";
+    cin >> choice;
+
+    symbol = choosePSymbol();
+
+    if (choice == 1) {
+        SinglePlayer(symbol);
+    } else if (choice == 2) {
+        TwoPlayer();
+    } else {
+        cout << "Wrong choice, exiting..." << endl;
+    }
+
+    saveStats();
+
+    return 0;
 }
