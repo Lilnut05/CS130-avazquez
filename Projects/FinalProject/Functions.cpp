@@ -174,6 +174,6 @@ void checkSecretWin() {
         cout << "              /   \\\n";
         cout << "             /     \\\n";
         cout << "            '-------'\n";
-        cout << " Congratulations, you are the TOP G!!!!"
+        cout << " Congratulations, you are the TOP G!!!!";
     }
 }
