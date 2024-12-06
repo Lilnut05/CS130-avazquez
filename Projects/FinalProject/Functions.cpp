@@ -11,7 +11,7 @@ char grid[3][3];
 void displayWelcome() {
     cout << "Welcome to Tic-Tac-Toe!" << endl;
 }
-
+//Choose player symbol X or O
 char choosePSymbol() {
     char symbol;
     cout << "Choose your symbol (X/O): ";
@@ -40,7 +40,7 @@ void displayGrid() {
         cout << endl;
     }
 }
-
+//Players move and check
 void PMove(char PSymbol) {
     int move;
     cout << "Enter your move (1-9): ";
@@ -54,18 +54,18 @@ void PMove(char PSymbol) {
 
     grid[(move - 1) / 3][(move - 1) % 3] = PSymbol;
 }
-
+//Random decision for cpu placement
 void CMove(char CSymbol) {
-    for (int i = 0; i < 9; i++) {
-        int row = i / 3;
-        int col = i % 3;
-        if (grid[row][col] == ' ') {
-            grid[row][col] = CSymbol;
-            break;
-        }
-    }
-}
+    srand(time(0));  // Seed for rng
 
+    int row, col;
+    do {
+        row = rand() % 3;  // Random row: 0, 1, or 2
+        col = rand() % 3;  // Random column: 0, 1, or 2
+    } while (grid[row][col] != ' '); //Check for empty
+    grid[row][col] = CSymbol;
+}
+//Checks for wins
 bool checkWin(char symbol) {
     for (int i = 0; i < 3; i++) {
         if ((grid[i][0] == symbol && grid[i][1] == symbol && grid[i][2] == symbol) ||
@@ -79,7 +79,7 @@ bool checkWin(char symbol) {
     }
     return false;
 }
-
+//Checks if game is tied
 bool checkTie() {
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
@@ -90,7 +90,7 @@ bool checkTie() {
     }
     return true;
 }
-
+//Single player
 void SinglePlayer(char PSymbol) {
     char CSymbol = (PSymbol == 'X') ? 'O' : 'X';
     initializeGrid();
@@ -121,7 +121,7 @@ void SinglePlayer(char PSymbol) {
         }
     }
 }
-
+//Two player
 void TwoPlayer() {
     char player1 = 'X', player2 = 'O';
     initializeGrid();
@@ -156,7 +156,7 @@ void TwoPlayer() {
         }
     }
 }
-
+//saves stats
 void saveStats() {
     ofstream outFile("gameStats.txt");
     outFile << "Games won: " << gamesWon << endl;
@@ -164,6 +164,7 @@ void saveStats() {
     outFile.close();
 }
 
+//secret win screen
 void checkSecretWin() {
     if (winStreak == 5) {
         cout << "            __________\n";
@@ -179,5 +180,8 @@ void checkSecretWin() {
         cout << "             /     \\\n";
         cout << "            '-------'\n";
         cout << " Congratulations, you are the TOP G!!!!";
+    }
+    else if (winStreak == 3) {
+        cout << "Congrats you found the sEECret winscreen!!"
     }
 }
