@@ -16,6 +16,10 @@ char choosePSymbol() {
     char symbol;
     cout << "Choose your symbol (X/O): ";
     cin >> symbol;
+    while (symbol != 'X' && symbol != 'O') {
+        cout << "Invalid choice! Please choose either 'X' or 'O': ";
+        cin >> symbol;
+    }
     return symbol;
 }
 
